@@ -104,26 +104,8 @@ nmap <leader>s :split<CR> <C-w><C-w>
 nmap <leader>w <C-w><C-w>_
 nmap <leader>w <C-w><C-w>_
 
+map <leader>q :bd<cr>
 
-"open tabs with command-<tab number>
-"map <D-S-]> gt
-"map <D-S-[> gT
-"map <D-≤> gt
-"map <D-≥> gT
-map <M-D-,> gt
-map <M-D-.> gT
-imap <D-≤> gt
-imap <D-≥> gT
-
-map <D-1> :tabn 1<CR>
-map <D-2> :tabn 2<CR>
-map <D-3> :tabn 3<CR>
-map <D-4> :tabn 4<CR>
-map <D-5> :tabn 5<CR>
-map <D-6> :tabn 6<CR>
-map <D-7> :tabn 7<CR>
-map <D-8> :tabn 8<CR>
-map <D-9> :tabn 9<CR>
 
 "map commenting
 nmap <D-/> <leader>ci <CR>
@@ -143,5 +125,5 @@ if has("autocmd")
 endif
 
 " lets me quickly edit my vimrc file in a new tab
-nmap <leader>v :tabedit $MYVIMRC<CR>
-nmap <leader>g :tabedit $MYGVIMRC<CR>
+nmap <leader>o :tabedit $MYVIMRC<CR>
+nmap <leader>p :tabedit $MYGVIMRC<CR>
