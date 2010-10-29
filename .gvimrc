@@ -14,7 +14,8 @@ set macmeta
 
 " Map command t to command-t
 if has("gui_macvim")
-    map <D-t> :CommandT<CR>
+  macmenu &File.New\ Tab key=<nop>
+  map <D-t> :CommandT<CR>
 endif
 
 " open new command-t selections in a tab
