@@ -1,7 +1,7 @@
 " Vim color file
 " Converted from Textmate theme Railscasts using Coloration v0.2.4 (http://github.com/sickill/coloration)
 
-set background=light
+set background=dark
 highlight clear
 
 if exists("syntax_on")
@@ -100,4 +100,24 @@ hi cssClassName  guifg=#e8bf6a guibg=NONE gui=NONE
 hi cssValueLength  guifg=#a5c261 guibg=NONE gui=NONE
 hi cssCommonAttr  guifg=#a5c261 guibg=NONE gui=NONE
 hi cssBraces  guifg=NONE guibg=NONE gui=NONE
+hi sassProperty guifg=#6d9cbe guibg=NONE gui=NONE
+hi link cssUIProp sassProperty
+hi link cssUIAttr sassCssAttribute
+hi link cssRenderAttr sassCssAttribute
+hi link cssBoxProp sassProperty
+hi link cssColorProp sassProperty
+hi link cssTextProp sassProperty
+hi link cssFontProp sassProperty
+hi link cssRenderProp sassProperty
+hi link cssGeneratedContentProp sassProperty
 
+hi link sassCssAttribute cssCommonAttr
+hi link cssTextAttr sassCssAttribute
+hi link cssFontAttr sassCssAttribute
+hi link cssBoxAttr sassCssAttribute
+hi sassAmpersand guifg=#cc7833 guibg=NONE gui=NONE
+hi link cssTagName sassClass
+hi sassMixinName guifg=#d0d0ff guibg=NONE gui=NONE
+hi link sassMixing sassMixinName
+hi link sassVariable sassMixinName
+hi sassUnits guifg=#cc7833 guibg=NONE gui=NONE

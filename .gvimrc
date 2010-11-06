@@ -16,6 +16,7 @@ set macmeta
 if has("gui_macvim")
   macmenu &File.New\ Tab key=<nop>
   map <D-t> :CommandT<CR>
+  imap <D-t> <Esc>:CommandT<CR>
 endif
 
 " open new command-t selections in a tab
@@ -24,6 +25,8 @@ let g:CommandTAcceptSelectionTabMap='<CR>'
 "open tabs with command-<tab number>
 map <M-D-Left> gT
 map <M-D-Right> gt
+imap <M-D-Left> <Esc>gT
+imap <M-D-Right> <Esc>gt
 
 map <D-1> :tabn 1<CR>
 map <D-2> :tabn 2<CR>

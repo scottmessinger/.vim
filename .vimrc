@@ -1,5 +1,6 @@
 " Example Vim configuration.
 " Copy or symlink to ~/.vimrc or ~/_vimrc.
+call pathogen#helptags()
 call pathogen#runtime_append_all_bundles() 
 set nocompatible                  " Must come first because it changes other options.
 
@@ -127,3 +128,13 @@ endif
 " lets me quickly edit my vimrc file in a new tab
 nmap <leader>o :tabedit $MYVIMRC<CR>
 nmap <leader>p :tabedit $MYGVIMRC<CR>
+
+" Show syntax highlighting groups for word under cursor
+nmap <C-S-P> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
