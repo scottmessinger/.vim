@@ -1,5 +1,6 @@
 " Example Vim graphical configuration.
 " Copy to ~/.gvimrc or ~/_gvimrc.
+" Or use vividchalk
 
 set guifont=Monaco:h12            " Font family and font size.
 set antialias                     " MacVim: smooth fonts.
@@ -12,6 +13,14 @@ set guioptions-=r                 " Don't show right scrollbar
 set nowrap
 set macmeta
 
+" allow highlighting with shift
+if has("gui_macvim")
+  let macvim_hig_shift_movement = 1
+endif
+
+" put command t window at top
+let g:CommandTMatchWindowAtTop = 1
+
 " Map command t to command-t
 if has("gui_macvim")
   macmenu &File.New\ Tab key=<nop>
@@ -19,7 +28,14 @@ if has("gui_macvim")
   imap <D-t> <Esc>:CommandT<CR>
 endif
 
-" open new command-t selections in a tab
+"if has("gui_macvim")
+  "macmenu &File.Open\ Tab\.\.\. key=<nop>
+"endif
+"map <D-T> :tabnew <bar> :CommandT <CR>
+"imap <D-T> <Esc>:tabnew<CR>
+"vmap <D-T> :tabnew<CR>
+
+"open new command-t selections in a tab
 let g:CommandTAcceptSelectionTabMap='<CR>'
 
 "open tabs with command-<tab number>
@@ -42,3 +58,6 @@ map <D-9> :tabn 9<CR>
 if has("autocmd")
   autocmd bufwritepost .gvimrc source $MYGVIMRC
 endif
+
+colorscheme railscasts2
+

@@ -51,8 +51,8 @@ set cursorline                    " Highlight current line
 " Useful status information at bottom of screen
 " set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
-" Or use vividchalk
 colorscheme railscasts2
+
 
 " Tab mappings.
 " map <leader>tt :tabnew<cr>
@@ -112,13 +112,6 @@ map <leader>q :bd<cr>
 nmap <D-/> <leader>ci <CR>
 vmap <D-/> <leader>ci <CR>
 imap <D-/> <C-O>,ci
-
-" allow highlighting with shift
-if has("gui_macvim")
-    let macvim_hig_shift_movement = 1
-endif
-
-let g:CommandTMatchWindowAtTop = 1
 
 " Source the vimrc file after saving it
 if has("autocmd")
